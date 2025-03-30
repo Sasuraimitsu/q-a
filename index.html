@@ -10,6 +10,15 @@
       line-height: 1.6;
       margin: 20px;
     }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #searchInput {
+      padding: 5px;
+      font-size: 14px;
+    }
     .qa-section {
       margin-bottom: 40px;
     }
@@ -35,7 +44,10 @@
   </style>
 </head>
 <body>
-  <h1>口座におけるQ＆A一覧</h1>
+  <div class="header">
+    <h1>口座におけるQ＆A一覧</h1>
+    <input type="text" id="searchInput" placeholder="ページ内検索..." onkeyup="searchFunction()">
+  </div>
 
   <!-- １：口座開設時のQ＆A -->
   <section class="qa-section" id="qanda-open-account">
@@ -89,7 +101,7 @@
       <p class="question">Q8：上記の認証手続きを公証役場で対応ができませんでした。どうすればいいですか？</p>
       <p class="answer">
         A8：下記の都道府県以外の公証役場でのお手続きは、私署証書の認証のみとなります。<br>
-        お申込み時にご連絡いただいた公証役場が下記以外に変更になった場合には、手続きが異なりますので LINE オフィシャルにご連絡ください。<br>
+        お申込み時にご連絡いただいた公証役場が下記以外に変更になった場合には、手続きが異なりますので <a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にご連絡ください。<br>
         ※対象：東京都、神奈川県、静岡県、愛知県、大阪府、宮城県、福岡県、北海道（札幌市）
       </p>
     </div>
@@ -131,21 +143,39 @@
     <div class="qa-item" id="q13">
       <p class="question">Q13：質問があった場合はどうすればいいですか？</p>
       <p class="answer">
-        A13：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャルアカウント</a>にてお気軽にお問い合わせください。営業時間内にご返信いたします。
+        A13：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にてお気軽にお問い合わせください。営業時間内にご返信いたします。
       </p>
     </div>
     <div class="qa-item" id="q14">
       <p class="question">Q14：よくわからないメールが銀行から来ました、どうすればいいでしょうか？</p>
       <p class="answer">
-        A14：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャルアカウント</a>をご利用ください。いつでもご連絡お待ちしております。
+        A14：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a>をご利用ください。いつでもご連絡お待ちしております。
       </p>
     </div>
   </section>
 
   <footer>
     <p>
-      ご連絡先は<a href="https://lin.ee/0MMLkok" target="_blank">LINEオフィシャル</a>までご連絡いただけると幸いです。
+      こちらのQ＆Aコーナーは順次内容を更新させていただいております。<br>
+      記載のない質問等ございましたら、ご連絡先は <a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> までご連絡いただけると幸いです.
     </p>
   </footer>
+
+  <script>
+    // シンプルなページ内検索機能
+    function searchFunction() {
+      var input = document.getElementById('searchInput');
+      var filter = input.value.toLowerCase();
+      var qaItems = document.getElementsByClassName('qa-item');
+      for (var i = 0; i < qaItems.length; i++) {
+        var text = qaItems[i].textContent || qaItems[i].innerText;
+        if (text.toLowerCase().indexOf(filter) > -1) {
+          qaItems[i].style.display = "";
+        } else {
+          qaItems[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
