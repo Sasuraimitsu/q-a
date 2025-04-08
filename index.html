@@ -42,7 +42,7 @@
       max-width: 100%;
     }
     .spacer {
-      /* 5行分のスペースを確保（およそ5行分の改行） */
+      /* Q9とQ10の間に3行分のスペースを確保 */
       margin: 20px 0;
     }
   </style>
@@ -62,7 +62,7 @@
     </div>
     <div class="qa-item" id="q2">
       <p class="question">Q2：口座開設の手続き完了には何日かかりますか？</p>
-      <p class="answer">A2：約１０営業日です。必要書類を受け取り次第、カンボジア側での手続きに入ります。口座番号（約５営業日）＋ デビットカード発行（約５営業日）の合計で約１０営業日となります。</p>
+      <p class="answer">A2：約１０営業日です。必要書類を受け取り次第、カンボジア側での手続きに入ります。口座番号（約５営業日）＋デビットカード発行（約５営業日）の合計で約１０営業日となります。</p>
     </div>
     <div class="qa-item" id="q3">
       <p class="question">Q3：口座開設のために必要な手続きは何ですか？</p>
@@ -114,15 +114,15 @@
       <p class="answer">
         A9：新旧どちらのパスポートも、顔写真が載っている見開き部分２ページ分の印刷をお願いします。<br>
         <!-- 画像差し込み例：jpgファイルの場合 -->
-        <img src="passport_example.jpg" alt="パスポート印刷例" class="embedded-media">
+        <img src="assets/passport_example.jpg" alt="パスポート印刷例" class="embedded-media">
         <!-- PDF を表示する場合は以下のように <embed> タグを利用 -->
-        <!-- <embed src="passport_example.pdf" type="application/pdf" class="embedded-media" width="100%" height="600px" /> -->
+        <!-- <embed src="assets/passport_example.pdf" type="application/pdf" class="embedded-media" width="100%" height="600px" /> -->
       </p>
     </div>
 
-    <!-- Q9とQ10の間に5行分のスペースを確保 -->
+    <!-- Q9とQ10の間に3行分のスペースを確保 -->
     <div class="spacer">
-      <br><br><br><br><br>
+      <br><br><br>
     </div>
 
     <div class="qa-item" id="q10">
@@ -130,20 +130,21 @@
       <p class="answer">
         A10：下記の表をご覧ください。<br>
         ※アクレダ銀行が発行するゴールドカードの年会費がお得です。<br>
-        <img src="card-status.jpg" alt="カード年会費一覧" class="embedded-media">
+        <img src="assets/card_fee_table.jpg" alt="カード年会費一覧" class="embedded-media">
         <!-- <embed src="assets/card_fee_table.pdf" type="application/pdf" class="embedded-media" width="100%" height="600px" /> -->
       </p>
     </div>
-    
   </section>
 
   <!-- ２：口座利用時のQ＆A -->
   <section class="qa-section" id="qanda-usage">
     <h2>２：口座利用時のQ＆A</h2>
+    <!-- Q11：お金の出金 -->
     <div class="qa-item" id="q11">
-      <p class="question">Q11：お金の預入はどこで行えばいいですか？</p>
-      <p class="answer">A11：日本を含め、どの国のATMからでも預け入れは可能です。</p>
+      <p class="question">Q11：お金の出金はどこで行えばいいですか？</p>
+      <p class="answer">A11：日本を含め、どの国のATMからでもお引出は可能です。</p>
     </div>
+    <!-- Q12：海外送金の上限額 -->
     <div class="qa-item" id="q12">
       <p class="question">Q12：アクレダ銀行からの海外送金の上限額を知りたいです。</p>
       <p class="answer">
@@ -151,16 +152,50 @@
         ただし、送金金額が大きい場合は、送金目的が明確な書類（例：インボイスや契約書等）の提出が必要です。
       </p>
     </div>
+    <!-- 新規追加：Q13～Q15 -->
     <div class="qa-item" id="q13">
-      <p class="question">Q13：質問があった場合はどうすればいいですか？</p>
+      <p class="question">Q13：Term depositとは、何ですか？</p>
       <p class="answer">
-        A13：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にてお気軽にお問い合わせください。営業時間内にご返信いたします。
+        A13：定期預金（最低預入金100㌦～）の事になります。以下の３種類の定期預金をご選択いただけます。<br>
+        ・ハイグロース定期預金（１ヶ月～12ヶ月、18ヶ月、24ヶ月）<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;満期時に元本と一緒に支払われるプレミアム金利が適用されます。<br>
+        ・ハイ・インカム定期預金（１ヶ月～12ヶ月、18ヶ月、24ヶ月）<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;満期時に元本が支払われる一方で、毎月利息が支払われます。<br>
+        ・長期預金（３年、４年、５年以上）<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;満期時に元本が支払われる一方で、3ヵ月ごとに利息が支払われます。
       </p>
     </div>
     <div class="qa-item" id="q14">
-      <p class="question">Q14：よくわからないメールが銀行から来ました、どうすればいいでしょうか？</p>
+      <p class="question">Q14：最低の預入金額についての注意点はございますか？</p>
       <p class="answer">
-        A14：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a>をご利用ください。いつでもご連絡お待ちしております。
+        A14：ご利用される預金口座の種目によって異なります。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;普通預金：なし<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;定期預金：100㌦<br>
+        ※普通預金の口座開設にあたり、カードの初年度会費と50ドルの最低お預け入れをお願いしております。
+      </p>
+    </div>
+    <div class="qa-item" id="q15">
+      <p class="question">Q15：定期預金の金利について教えてください。</p>
+      <p class="answer">
+        A15：各定期預金の種類による金利は下記のサイトをご覧ください。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;https://www.acledabank.com.kh/kh/eng/ps_defixeddeposit?t=p<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;ハイグロース定期預金＝Hi-Growth<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;ハイ・インカム定期預金＝Hi-Income<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;長期預金＝Long Term<br>
+        の項目をご参照ください。
+      </p>
+    </div>
+    <!-- もともとの Q13とQ14を再番号付け -->
+    <div class="qa-item" id="q16">
+      <p class="question">Q16：質問があった場合はどうすればいいですか？</p>
+      <p class="answer">
+        A16：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にてお気軽にお問い合わせください。営業時間内にご返信いたします。
+      </p>
+    </div>
+    <div class="qa-item" id="q17">
+      <p class="question">Q17：よくわからないメールが銀行から来ました、どうすればいいでしょうか？</p>
+      <p class="answer">
+        A17：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a>をご利用ください。いつでもご連絡お待ちしております。
       </p>
     </div>
   </section>
